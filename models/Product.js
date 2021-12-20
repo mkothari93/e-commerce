@@ -14,13 +14,10 @@ Product.init(
     id: {
       //Defines data type as a Integer
       type: DataTypes.INTEGER,
-
       //Defines that it shouldn't allow null values
       allowNull: false,
-
       //Defines that this is the Primary Key
       primaryKey: true,
-
       //Defines to auto increment
       autoIncrement: true
     },
@@ -29,7 +26,6 @@ Product.init(
     product_name: {
       //Defines data type as a String
       type: DataTypes.STRING,
-
       //Defines that it shouldn't allow null values
       allowNull: false,
     },
@@ -38,10 +34,8 @@ Product.init(
     price: {
       //Defines data type as a Decimal
       type: DataTypes.DECIMAL,
-
       //Defines that it shouldn't allow null values
       allowNull: false,
-
       //Validates that value is a Decimal
       validate: {
         isDecimal: true
@@ -52,13 +46,10 @@ Product.init(
     stock: {
       //Defines data type as a Integer
       type: DataTypes.INTEGER,
-
       //Defines that it shouldn't allow null values
       allowNull: false,
-
       //Sets a default value of 10
       min: 10,
-
       //Validates that value is a numeric value
       validate: {
         isNumeric: true
@@ -69,14 +60,11 @@ Product.init(
     category_id: {
       //Defines data type as a Integer
       type: DataTypes.INTEGER,
-
       //Defines that it shouldn't allow null values
       allowNull: false,
-
       references: {
         //References to the Category model
         model: Category,
-
         //Column name of the Category model
         key: 'id'
       }
